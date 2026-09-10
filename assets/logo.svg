@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="64" viewBox="0 0 260 64" role="img" aria-label="Tillie's Treats">
+  <title>Tillie's Treats</title>
+  <g fill="none" stroke="#8a5a2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- cupcake wrapper -->
+    <path d="M14 30 h36 l-5 21 a4 4 0 0 1 -4 3 h-18 a4 4 0 0 1 -4 -3 z" fill="#e8d8c3"/>
+    <path d="M22 33 l3 20 M32 33 v21 M42 33 l-3 20" stroke-width="2"/>
+    <!-- frosting -->
+    <path d="M12 30 a10 10 0 0 1 9 -13 a11 11 0 0 1 22 0 a10 10 0 0 1 9 13 z" fill="#c98a4b" stroke="#8a5a2b"/>
+    <!-- cherry -->
+    <circle cx="32" cy="10" r="4" fill="#b5443b" stroke="#8a5a2b"/>
+    <path d="M32 6 q4 -5 8 -3" fill="none"/>
+  </g>
+  <text x="66" y="41" font-family="Fraunces, 'Playfair Display', Georgia, serif" font-size="27" font-weight="600" fill="#4a3524">Tillie&#8217;s Treats</text>
+</svg>

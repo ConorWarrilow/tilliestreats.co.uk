@@ -1,12 +1,370 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Site</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tillie's Treats — Handmade celebration cakes &amp; bakes in Surrey</title>
+  <meta name="description" content="Tillie's Treats is a small-batch home bakery in Guildford, Surrey, making custom celebration cakes, cupcakes, macarons and iced biscuits to order. Placeholder demo site.">
+  <meta name="theme-color" content="#faf5ec">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- No-flash theme bootstrap: apply the saved/system theme before paint -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("tt-theme");
+        if (saved === "dark" || saved === "light") {
+          document.documentElement.setAttribute("data-theme", saved);
+        } else {
+          document.documentElement.removeAttribute("data-theme");
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
-    <h1>400</h1>
-    <p>Success</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== Header ===================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top" aria-label="Tillie's Treats — home">
+        <svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 15h18l-2.5 11a2 2 0 0 1-2 1.6h-9A2 2 0 0 1 9.5 26z"></path>
+          <path d="M6 15a7 7 0 0 1 6-9 7 7 0 0 1 8 0 7 7 0 0 1 6 9z"></path>
+          <path d="M16 6V3"></path>
+          <circle cx="16" cy="3" r="1.4" fill="currentColor"></circle>
+        </svg>
+        <span>Tillie&rsquo;s Treats</span>
+      </a>
+
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
+
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#pricing">Sizes &amp; pricing</a></li>
+          <li><a href="#desserts">Other bakes</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn" href="#contact">Enquire</a>
+        <button class="icon-btn theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"></path>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <span id="top"></span>
+
+    <!-- ===================== Hero ===================== -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Guildford &middot; Surrey</p>
+          <h1>Handmade cakes for the days worth celebrating</h1>
+          <p class="lead">Tillie&rsquo;s Treats is a tiny home bakery baking custom celebration cakes, cupcakes, macarons and iced biscuits to order &mdash; each one made from scratch, just for you.</p>
+          <div class="hero__actions">
+            <a class="btn" href="#contact">Start an enquiry</a>
+            <a class="btn btn--ghost" href="#gallery">See the gallery</a>
+          </div>
+        </div>
+        <div class="hero__media">
+          <img
+            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=1100&amp;q=70"
+            alt="A pastel pink celebration cake decorated with fresh flowers"
+            width="1100" height="1375" loading="eager">
+          <span class="hero__badge">Small batch &middot; made to order</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== About ===================== -->
+    <section class="section section--alt" id="about">
+      <div class="container about__grid">
+        <div class="about__media">
+          <img
+            src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&amp;fit=crop&amp;w=800&amp;q=70"
+            alt="Baker piping buttercream onto a cake in a home kitchen"
+            width="800" height="800" loading="lazy">
+        </div>
+        <div class="about__body">
+          <p class="eyebrow">About</p>
+          <h2>Hello, I&rsquo;m Tillie</h2>
+          <p>I trained as a pastry chef and now bake from my home kitchen in Guildford, taking on a small number of orders each week so every cake gets proper attention. Everything is baked fresh, filled with real buttercream and finished by hand.</p>
+          <p>I love the briefs that mean something &mdash; a first birthday, a retirement, an anniversary, a &ldquo;we just felt like cake&rdquo; Tuesday. Tell me the occasion and roughly what you picture, and I&rsquo;ll take it from there.</p>
+          <dl class="stats">
+            <div><dt>8+ yrs</dt><dd>baking professionally</dd></div>
+            <div><dt>1 kitchen</dt><dd>small-batch, made to order</dd></div>
+            <div><dt>Surrey</dt><dd>collection &amp; local delivery</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Sizes & pricing ===================== -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Sizes &amp; pricing</p>
+          <h2>Cake sizes &amp; starting prices</h2>
+          <p class="lead">A guide to portions and starting prices. Final quotes depend on the design, finish and decorations &mdash; every order is priced individually.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card">
+            <h3>6&Prime; round</h3>
+            <p class="price">from &pound;55 <span>/ approx. 10&ndash;12 portions</span></p>
+            <ul>
+              <li>Two layers, one flavour</li>
+              <li>Buttercream or semi-naked finish</li>
+              <li>Great for small gatherings</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>8&Prime; round</h3>
+            <p class="price">from &pound;85 <span>/ approx. 20&ndash;24 portions</span></p>
+            <ul>
+              <li>Three layers, one or two flavours</li>
+              <li>Buttercream, drip or textured finish</li>
+              <li>The most popular choice</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Two tier</h3>
+            <p class="price">from &pound;180 <span>/ approx. 40&ndash;50 portions</span></p>
+            <ul>
+              <li>6&Prime; stacked on 8&Prime;</li>
+              <li>Coordinated finish &amp; decoration</li>
+              <li>Best for weddings &amp; big birthdays</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="note"><strong>Tall / extra portions:</strong> deeper &ldquo;tall&rdquo; tiers and larger sizes are available on request. Sugar flowers, hand-painting and bespoke toppers are quoted on top of the base price.</p>
+      </div>
+    </section>
+
+    <!-- ===================== Other bakes ===================== -->
+    <section class="section section--alt" id="desserts">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Other bakes</p>
+          <h2>Beyond the cake</h2>
+          <p class="lead">Add-ons for dessert tables and party bags, or order them on their own. Minimum quantities apply to some items.</p>
+        </div>
+
+        <div class="grid grid--auto">
+          <article class="card card--media">
+            <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&amp;fit=crop&amp;w=600&amp;q=70" alt="A row of frosted cupcakes with piped swirls" width="600" height="450" loading="lazy">
+            <div class="card__text"><h3>Cupcakes</h3><p>Batches of 12 or 24, piped and topped to match your theme.</p></div>
+          </article>
+          <article class="card card--media">
+            <img src="https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&amp;fit=crop&amp;w=600&amp;q=70" alt="Pastel coloured French macarons in a row" width="600" height="450" loading="lazy">
+            <div class="card__text"><h3>Macarons</h3><p>Delicate shells with a choice of ganache or buttercream fillings.</p></div>
+          </article>
+          <article class="card card--media">
+            <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&amp;fit=crop&amp;w=600&amp;q=70" alt="Decorated iced biscuits on a cooling rack" width="600" height="450" loading="lazy">
+            <div class="card__text"><h3>Iced biscuits</h3><p>Hand-iced shapes and letters &mdash; lovely as favours or gifts.</p></div>
+          </article>
+          <article class="card card--media">
+            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&amp;fit=crop&amp;w=600&amp;q=70" alt="Tray of chocolate brownies cut into squares" width="600" height="450" loading="lazy">
+            <div class="card__text"><h3>Brownies &amp; traybakes</h3><p>Rich brownies, blondies and seasonal traybakes by the box.</p></div>
+          </article>
+          <article class="card card--media">
+            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&amp;fit=crop&amp;w=600&amp;q=70" alt="A dessert table with a variety of cakes and sweet treats" width="600" height="450" loading="lazy">
+            <div class="card__text"><h3>Dessert tables</h3><p>A coordinated spread of cake, cupcakes and treats for events.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Gallery ===================== -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section__head center">
+          <p class="eyebrow">Gallery</p>
+          <h2>A few recent bakes</h2>
+          <p class="lead">Placeholder photos for now &mdash; select any image to view it larger.</p>
+        </div>
+
+        <div class="gallery">
+          <button type="button"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=500&amp;q=60" data-full="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=1400&amp;q=75" alt="Pink celebration cake with fresh flowers" width="500" height="500" loading="lazy"></button>
+          <button type="button"><img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&amp;fit=crop&amp;w=500&amp;q=60" data-full="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&amp;fit=crop&amp;w=1400&amp;q=75" alt="Stack of colourful macarons" width="500" height="500" loading="lazy"></button>
+          <button type="button"><img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&amp;fit=crop&amp;w=500&amp;q=60" data-full="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&amp;fit=crop&amp;w=1400&amp;q=75" alt="Slice of layered sponge cake on a plate" width="500" height="500" loading="lazy"></button>
+          <button type="button"><img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&amp;fit=crop&amp;w=500&amp;q=60" data-full="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&amp;fit=crop&amp;w=1400&amp;q=75" alt="White tiered wedding cake" width="500" height="500" loading="lazy"></button>
+          <button type="button"><img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&amp;fit=crop&amp;w=500&amp;q=60" data-full="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&amp;fit=crop&amp;w=1400&amp;q=75" alt="Dessert table with assorted sweet treats" width="500" height="500" loading="lazy"></button>
+          <button type="button"><img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&amp;fit=crop&amp;w=500&amp;q=60" data-full="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&amp;fit=crop&amp;w=1400&amp;q=75" alt="Birthday cake topped with lit candles" width="500" height="500" loading="lazy"></button>
+          <button type="button"><img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&amp;fit=crop&amp;w=500&amp;q=60" data-full="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&amp;fit=crop&amp;w=1400&amp;q=75" alt="Single cupcake with tall buttercream swirl" width="500" height="500" loading="lazy"></button>
+          <button type="button"><img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&amp;fit=crop&amp;w=500&amp;q=60" data-full="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&amp;fit=crop&amp;w=1400&amp;q=75" alt="Row of frosted cupcakes" width="500" height="500" loading="lazy"></button>
+          <button type="button"><img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&amp;fit=crop&amp;w=500&amp;q=60" data-full="https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&amp;fit=crop&amp;w=1400&amp;q=75" alt="Chocolate cake with a glossy ganache finish" width="500" height="500" loading="lazy"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="section section--alt" id="faq">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Good things to know</h2>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>How far in advance should I order?</summary>
+            <p>As much notice as you can &mdash; popular dates book up weeks ahead, especially spring and summer weekends. For larger cakes and weddings, three to six weeks is ideal. It&rsquo;s always worth asking about shorter notice in case there&rsquo;s a slot.</p>
+          </details>
+          <details>
+            <summary>Is a deposit required?</summary>
+            <p>Yes. A deposit secures your date and is deducted from the final balance. The balance is due before collection or delivery. Deposits are non-refundable, but can usually be moved to another date with enough notice.</p>
+          </details>
+          <details>
+            <summary>Can you cater for allergies and dietary needs?</summary>
+            <p>Eggless and dairy-free sponges can be arranged with notice. Please note the kitchen is not a nut-free or gluten-free environment, so cakes cannot be guaranteed free from traces &mdash; always mention allergies when you enquire.</p>
+          </details>
+          <details>
+            <summary>Do you deliver?</summary>
+            <p>Collection is from Guildford. Local delivery within Surrey can be arranged for a fee based on distance; tiered cakes are always delivered rather than collected. A confirmed address is shared once your order is booked.</p>
+          </details>
+          <details>
+            <summary>How should I store and serve the cake?</summary>
+            <p>Keep it cool and out of direct sun. If refrigerated, bring it back to room temperature for 30&ndash;60 minutes before serving so the sponge and buttercream soften. Most cakes are best within three to four days.</p>
+          </details>
+          <details>
+            <summary>Can I change my order after booking?</summary>
+            <p>Adding extras is usually fine if time allows. Reducing the size or cancelling within two weeks of the date may be subject to a charge, as ingredients and planning are already underway.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Contact ===================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Contact</p>
+          <h2>Enquiries &amp; orders</h2>
+          <p class="lead">Orders and quotes are handled by email so everything is in writing. Have a look at sizes, other bakes and the FAQ first, then send over the details below.</p>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__card">
+            <h3>Email</h3>
+            <p><a href="mailto:hello@tilliestreats.co.uk">hello@tilliestreats.co.uk</a></p>
+            <p>Replies within 2&ndash;3 days. If you don&rsquo;t hear back, please check your spam folder.</p>
+          </div>
+          <div class="contact__card">
+            <h3>Area</h3>
+            <p>Guildford, Surrey</p>
+            <p>Collection from Guildford; local delivery across Surrey by arrangement. Full address shared once booked.</p>
+          </div>
+          <div class="contact__card">
+            <h3>Kitchen hours</h3>
+            <p>Mon&ndash;Fri: 9:00&ndash;17:00<br>Sat: 9:00&ndash;12:00<br>Sun: closed</p>
+            <p>Collections are by appointment within these hours.</p>
+          </div>
+        </div>
+
+        <h3 class="contact__steps-heading">What to include in your enquiry</h3>
+        <ol class="contact__steps">
+          <li>Your date, and whether you need collection or delivery.</li>
+          <li>Rough guest numbers, plus the occasion and any theme or colours.</li>
+          <li>Flavours you like, and any allergies or dietary needs.</li>
+          <li>A couple of reference photos if you have them, and a rough budget.</li>
+        </ol>
+
+        <p>Find me on social media (links coming soon):</p>
+        <div class="socials" aria-label="Social media, links not yet active">
+          <span class="social" title="Instagram (coming soon)" aria-label="Instagram, coming soon">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+            </svg>
+          </span>
+          <span class="social" title="Facebook (coming soon)" aria-label="Facebook, coming soon">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 8h2V5h-2a3 3 0 0 0-3 3v2H9v3h2v6h3v-6h2l1-3h-3V8a1 1 0 0 1 1-1z"></path>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a class="brand" href="#top" aria-label="Tillie's Treats — home">
+            <svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 15h18l-2.5 11a2 2 0 0 1-2 1.6h-9A2 2 0 0 1 9.5 26z"></path>
+              <path d="M6 15a7 7 0 0 1 6-9 7 7 0 0 1 8 0 7 7 0 0 1 6 9z"></path>
+              <path d="M16 6V3"></path>
+              <circle cx="16" cy="3" r="1.4" fill="currentColor"></circle>
+            </svg>
+            <span>Tillie&rsquo;s Treats</span>
+          </a>
+          <p class="footer-blurb">Small-batch home bakery in Guildford, Surrey. Custom cakes and bakes, made to order.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#pricing">Sizes &amp; pricing</a></li>
+            <li><a href="#desserts">Other bakes</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="terms.html">Terms &amp; conditions</a></li>
+            <li><a href="privacy.html">Privacy policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bar">
+        <span>&copy; <span data-year>2026</span> Tillie&rsquo;s Treats. All rights reserved.</span>
+        <span>Placeholder demo site &mdash; images and details are not final.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <dialog class="lightbox" aria-label="Image viewer">
+    <button class="icon-btn lightbox__close" type="button" aria-label="Close image viewer">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M6 6l12 12M18 6L6 18"></path>
+      </svg>
+    </button>
+    <img alt="">
+    <p class="lightbox__caption"></p>
+  </dialog>
+
+  <script src="theme.js" defer></script>
 </body>
 </html>

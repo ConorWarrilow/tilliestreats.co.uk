@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms &amp; conditions — Tillie's Treats</title>
+  <meta name="description" content="Placeholder terms and conditions for the Tillie's Treats demo site.">
+  <meta name="theme-color" content="#faf5ec">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("tt-theme");
+        if (saved === "dark" || saved === "light") document.documentElement.setAttribute("data-theme", saved);
+        else document.documentElement.removeAttribute("data-theme");
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="Tillie's Treats — home">
+        <svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 15h18l-2.5 11a2 2 0 0 1-2 1.6h-9A2 2 0 0 1 9.5 26z"></path>
+          <path d="M6 15a7 7 0 0 1 6-9 7 7 0 0 1 8 0 7 7 0 0 1 6 9z"></path>
+          <path d="M16 6V3"></path>
+          <circle cx="16" cy="3" r="1.4" fill="currentColor"></circle>
+        </svg>
+        <span>Tillie&rsquo;s Treats</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a href="index.html#pricing">Sizes &amp; pricing</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <button class="icon-btn theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"></path></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="legal">
+    <p class="eyebrow"><a href="index.html">&larr; Back to home</a></p>
+    <h1>Terms &amp; conditions</h1>
+    <p><em>This is placeholder text for a demo site. Replace it with terms drafted for the real business before going live.</em></p>
+
+    <h2>1. Orders &amp; quotes</h2>
+    <p>All orders are made to order and confirmed in writing by email. A quote is an estimate until a date is booked and a deposit is received. Prices shown on the site are starting prices and may change without notice.</p>
+
+    <h2>2. Deposits &amp; payment</h2>
+    <p>A non-refundable deposit is required to secure your date. The remaining balance is due before collection or delivery. Dates are not held until a deposit has been received.</p>
+
+    <h2>3. Changes &amp; cancellations</h2>
+    <p>Requests to change a design or size should be made as early as possible and cannot be guaranteed. Cancellations within a set period of the order date may incur a charge to cover ingredients and time already committed.</p>
+
+    <h2>4. Allergens</h2>
+    <p>Bakes are produced in a home kitchen that also handles nuts, gluten, dairy, eggs and soya. We cannot guarantee any product is free from traces of allergens. It is the customer's responsibility to inform guests.</p>
+
+    <h2>5. Collection, delivery &amp; care</h2>
+    <p>Once an order has been collected or delivered and signed for, responsibility for the product passes to the customer, including transport, storage and serving. Care guidance is provided with every order.</p>
+
+    <h2>6. Photography</h2>
+    <p>We may photograph finished orders for our portfolio and social media. Let us know in advance if you would prefer your order not to be shared.</p>
+
+    <h2>7. Liability</h2>
+    <p>Our liability for any order is limited to the value paid for that order. Nothing in these terms excludes liability that cannot be excluded under law.</p>
+
+    <p><strong>Last updated:</strong> placeholder date.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__bar">
+        <span>&copy; <span data-year>2026</span> Tillie&rsquo;s Treats. All rights reserved.</span>
+        <span><a href="privacy.html">Privacy policy</a> &middot; <a href="index.html">Home</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="theme.js" defer></script>
+</body>
+</html>
