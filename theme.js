@@ -1,44 +1,9 @@
 /* Tillie's Treats — progressive enhancement
-   - light/dark theme toggle (persisted, respects system default)
    - mobile navigation
    - gallery lightbox
-   - dynamic footer year
-   The no-flash theme bootstrap runs inline in <head>; this file wires
-   up the interactive bits after the DOM is ready. */
+   - dynamic footer year */
 (function () {
   "use strict";
-
-  var root = document.documentElement;
-  var STORAGE_KEY = "tt-theme";
-
-  /* ---- Theme toggle -------------------------------------------------- */
-  function systemPrefersDark() {
-    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-  }
-
-  function currentTheme() {
-    var forced = root.getAttribute("data-theme");
-    if (forced === "dark" || forced === "light") return forced;
-    return systemPrefersDark() ? "dark" : "light";
-  }
-
-  function applyTheme(theme) {
-    root.setAttribute("data-theme", theme);
-    try { localStorage.setItem(STORAGE_KEY, theme); } catch (e) {}
-    var btn = document.querySelector(".theme-toggle");
-    if (btn) {
-      btn.setAttribute("aria-pressed", String(theme === "dark"));
-      btn.setAttribute("aria-label", theme === "dark" ? "Switch to light theme" : "Switch to dark theme");
-    }
-  }
-
-  var toggle = document.querySelector(".theme-toggle");
-  if (toggle) {
-    toggle.addEventListener("click", function () {
-      applyTheme(currentTheme() === "dark" ? "light" : "dark");
-    });
-    applyTheme(currentTheme());
-  }
 
   /* ---- Mobile navigation ------------------------------------------- */
   var navToggle = document.querySelector(".nav-toggle");

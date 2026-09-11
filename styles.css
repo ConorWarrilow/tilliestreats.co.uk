@@ -2,13 +2,12 @@
    Tillie's Treats — global stylesheet
    --------------------------------------------------------------------------
    All theming lives here. Colours, type, spacing, radii and shadows are
-   declared once as custom properties on :root (light) and overridden for
-   dark mode. To re-theme the site later, edit the token blocks below and
-   nothing else.
+   declared once as custom properties on :root. To re-theme the site later,
+   edit the token block below and nothing else.
    ========================================================================== */
 
 /* ---------------------------------------------------------------------------
-   1. Design tokens — LIGHT (default)
+   1. Design tokens
    --------------------------------------------------------------------------- */
 :root {
   color-scheme: light;
@@ -82,70 +81,7 @@
 }
 
 /* ---------------------------------------------------------------------------
-   2. Design tokens — DARK
-   Applied when the OS prefers dark AND the user has not forced light,
-   and again for an explicit [data-theme="dark"] so the toggle always wins.
-   --------------------------------------------------------------------------- */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-
-    --color-accent:        #e895a1;
-    --color-accent-strong: #f2b4bd;
-    --color-accent-soft:   #3d2429;
-    --color-on-accent:     #23090c;
-
-    --color-caramel:       #d69568;
-    --color-sage:          #bcbb96;
-
-    --color-bg:            #170b0d;
-    --color-surface:       #211116;
-    --color-surface-2:     #1c0f13;
-    --color-overlay:       rgba(0, 0, 0, 0.66);
-
-    --color-text:          #f1e0e2;
-    --color-heading:       #fbeff0;
-    --color-muted:         #c6a0a5;
-
-    --color-border:        #3a2229;
-    --color-border-strong: #4d2e35;
-
-    --shadow-sm: 0 1px 0 rgba(0, 0, 0, 0.5);
-    --shadow-md: 0 2px 12px rgba(0, 0, 0, 0.45);
-    --shadow-lg: 0 4px 26px rgba(0, 0, 0, 0.55);
-  }
-}
-
-:root[data-theme="dark"] {
-  color-scheme: dark;
-
-  --color-accent:        #e895a1;
-  --color-accent-strong: #f2b4bd;
-  --color-accent-soft:   #3d2429;
-  --color-on-accent:     #23090c;
-
-  --color-caramel:       #d69568;
-  --color-sage:          #bcbb96;
-
-  --color-bg:            #170b0d;
-  --color-surface:       #211116;
-  --color-surface-2:     #1c0f13;
-  --color-overlay:       rgba(0, 0, 0, 0.66);
-
-  --color-text:          #f1e0e2;
-  --color-heading:       #fbeff0;
-  --color-muted:         #c6a0a5;
-
-  --color-border:        #3a2229;
-  --color-border-strong: #4d2e35;
-
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.6);
-}
-
-/* ---------------------------------------------------------------------------
-   3. Reset & base
+   2. Reset & base
    --------------------------------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -397,18 +333,6 @@ ul, ol { padding-left: 1.2em; }
 }
 .icon-btn:hover { background: var(--color-accent-soft); color: var(--color-accent-strong); }
 .icon-btn svg { width: 20px; height: 20px; }
-
-/* theme toggle: show correct glyph per theme */
-.theme-toggle .icon-sun { display: none; }
-.theme-toggle .icon-moon { display: block; }
-:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
-  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
-  :root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
-  :root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
-}
 
 .nav-toggle { display: none; }
 
