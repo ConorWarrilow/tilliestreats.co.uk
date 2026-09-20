@@ -21,7 +21,7 @@
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="#top" aria-label="Tillie's Treats — home">
-        <img class="brand__logo" src="assets/logo.jpg" alt="Tillie's Treats — Cakes &amp; Catering" width="480" height="480">
+        <img class="brand__logo" src="assets/logo.jpeg" alt="Tillie's Treats — Cakes &amp; Catering" width="480" height="480">
       </a>
 
       <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
@@ -33,7 +33,7 @@
       <nav class="nav" id="primary-nav" aria-label="Primary">
         <ul class="nav__list">
           <li><a href="#about">About</a></li>
-          <li><a href="#pricing">Sizes &amp; pricing</a></li>
+          <li><a href="#cakes">Cakes</a></li>
           <li><a href="#desserts">Other bakes</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#faq">FAQ</a></li>
@@ -49,32 +49,30 @@
 
     <!-- ===================== Hero ===================== -->
     <section class="hero">
-      <div class="container hero__grid">
+      <div class="hero__media">
+        <img
+          src="https://images.unsplash.com/photo-1707327994698-c52741c08329?q=80&amp;w=1470&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="A decorated celebration cake"
+          width="1470" height="980" loading="eager">
+      </div>
+      <div class="container hero__content">
         <div class="hero__copy">
           <p class="eyebrow">Guildford &middot; Surrey</p>
-          <h1>Handmade cakes for the days worth celebrating</h1>
-          <p class="lead">Tillie&rsquo;s Treats is a tiny home bakery baking custom celebration cakes, cupcakes, macarons and iced biscuits to order &mdash; each one made from scratch, just for you.</p>
+          <h1>Bespoke Cakes & Catering</h1>
+          <p class="lead">At Tillies, we specialise in creating beautiful, bespoke celebration cakes and delicious catering for all occasions. From birthdays and anniversaries, to weddings, baby showers and special gatherings, we create thoughtfully made food and desserts designed to make every celebration feel that little bit more special.</p>
           <div class="hero__actions">
-            <a class="btn" href="#contact">Start an enquiry</a>
-            <a class="btn btn--ghost" href="#gallery">See the gallery</a>
+            <a class="btn btn--ghost" href="#contact">Start an enquiry</a>
           </div>
-        </div>
-        <div class="hero__media">
-          <img
-            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=1100&amp;q=70"
-            alt="A pastel pink celebration cake decorated with fresh flowers"
-            width="1100" height="1375" loading="eager">
-          <span class="hero__badge">Small batch &middot; made to order</span>
         </div>
       </div>
     </section>
 
     <!-- ===================== About ===================== -->
-    <section class="section section--alt" id="about">
+    <section class="section section--surface" id="about">
       <div class="container about__grid">
         <div class="about__media">
           <img
-            src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&amp;fit=crop&amp;w=800&amp;q=70"
+            src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&amp;fit=crop&amp;w=500&amp;q=60"
             alt="Baker piping buttercream onto a cake in a home kitchen"
             width="800" height="800" loading="lazy">
         </div>
@@ -92,58 +90,18 @@
       </div>
     </section>
 
-    <!-- ===================== Sizes & pricing ===================== -->
-    <section class="section" id="pricing">
-      <div class="container">
-        <div class="section__head">
-          <p class="eyebrow">Sizes &amp; pricing</p>
-          <h2>Cake sizes &amp; starting prices</h2>
-          <p class="lead">A guide to portions and starting prices. Final quotes depend on the design, finish and decorations &mdash; every order is priced individually.</p>
-        </div>
-
-        <div class="grid grid--3">
-          <article class="card">
-            <h3>6&Prime; round</h3>
-            <p class="price">from &pound;55 <span>/ approx. 10&ndash;12 portions</span></p>
-            <ul>
-              <li>Two layers, one flavour</li>
-              <li>Buttercream or semi-naked finish</li>
-              <li>Great for small gatherings</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>8&Prime; round</h3>
-            <p class="price">from &pound;85 <span>/ approx. 20&ndash;24 portions</span></p>
-            <ul>
-              <li>Three layers, one or two flavours</li>
-              <li>Buttercream, drip or textured finish</li>
-              <li>The most popular choice</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Two tier</h3>
-            <p class="price">from &pound;180 <span>/ approx. 40&ndash;50 portions</span></p>
-            <ul>
-              <li>6&Prime; stacked on 8&Prime;</li>
-              <li>Coordinated finish &amp; decoration</li>
-              <li>Best for weddings &amp; big birthdays</li>
-            </ul>
-          </article>
-        </div>
-
-        <p class="note"><strong>Tall / extra portions:</strong> deeper &ldquo;tall&rdquo; tiers and larger sizes are available on request. Sugar flowers, hand-painting and bespoke toppers are quoted on top of the base price.</p>
+    <!-- ===================== Services introduction ===================== -->
+    <section class="services-intro" aria-labelledby="services-intro-title" data-parallax>
+      <img class="services-intro__image" src="https://images.unsplash.com/photo-1679452233338-ae9384795b7b?auto=format&amp;fit=crop&amp;w=1800&amp;q=80" alt="Frosted cupcakes arranged on a table" width="1800" height="1200" loading="lazy">
+      <div class="services-intro__overlay"></div>
+      <div class="container services-intro__content">
+        <h2 id="services-intro-title">Our services</h2>
       </div>
     </section>
 
-    <!-- ===================== Other bakes ===================== -->
+    <!-- ===================== Services ===================== -->
     <section class="section section--alt" id="desserts">
       <div class="container">
-        <div class="section__head">
-          <p class="eyebrow">Other bakes</p>
-          <h2>Beyond the cake</h2>
-          <p class="lead">Add-ons for dessert tables and party bags, or order them on their own. Minimum quantities apply to some items.</p>
-        </div>
-
         <div class="grid grid--auto">
           <article class="card card--media">
             <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&amp;fit=crop&amp;w=600&amp;q=70" alt="A row of frosted cupcakes with piped swirls" width="600" height="450" loading="lazy">
@@ -169,13 +127,84 @@
       </div>
     </section>
 
+    <!-- ===================== Sizes & pricing ===================== -->
+    <section class="section" id="cakes">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Cakes</p>
+          <h3>Sizes &amp; pricing</h2>
+          <p class="lead">We offer a wide range of bespoke cakes for your special occasion. Filled and fully covered in buttercream, with custom themes and colours available for birthdays, parties and special occasions.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card">
+            <h3>6&Prime; cake</h3>
+            <p class="price">from &pound;45</p>
+            <ul>
+              <li>Filled and fully covered in buttercream</li>
+              <li>Custom themes and colours available</li>
+              <li>Ideal for smaller celebrations</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>8&Prime; cake</h3>
+            <p class="price">from &pound;55</p>
+            <ul>
+              <li>Filled and fully covered in buttercream</li>
+              <li>Custom themes and colours available</li>
+              <li>Perfect for birthdays and parties</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>10&Prime; cake</h3>
+            <p class="price">from &pound;70</p>
+            <ul>
+              <li>Filled and fully covered in buttercream</li>
+              <li>Custom themes and colours available</li>
+              <li>Made for larger celebrations</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="pricing__menu">
+          <div class="pricing__menu-head">
+            <h3>Flavours &amp; fillings</h3>
+            <p>Mix and match your sponge, buttercream and filling to make the cake your own.</p>
+          </div>
+
+          <div class="pricing__flavours">
+            <div class="pricing__flavour-group">
+              <h4>Classic sponges</h4>
+              <p class="pricing__flavour-options"><span>Vanilla</span><span>Chocolate</span><span>Lemon</span><span>Marble</span></p>
+            </div>
+            <div class="pricing__flavour-group">
+              <h4>Speciality sponges</h4>
+              <p class="pricing__flavour-options"><span>Carrot cake</span><span>Country fruit sponge</span><span>Fresh fruit sponge<sup>*</sup></span></p>
+            </div>
+            <div class="pricing__flavour-group">
+              <h4>Buttercreams &amp; fillings</h4>
+              <p class="pricing__flavour-options"><span>Vanilla, lemon or chocolate buttercream</span><span>Chocolate fudge</span><span>Chocolate orange</span><span>Mint chocolate</span><span>Nutella</span><span>Biscoff</span><span>Raspberry or strawberry jam</span><span>Lemon curd</span></p>
+            </div>
+            <div class="pricing__flavour-group">
+              <h4>Chocolate ganache</h4>
+              <p class="pricing__flavour-options"><span>Dark chocolate</span><span>Milk chocolate</span><span>White chocolate</span></p>
+            </div>
+          </div>
+        </div>
+
+        <p class="note"><strong>Individual quotes:</strong> celebration cakes are priced according to size, flavour, filling and design. Some premium flavours and fillings may cost slightly more. <strong>Fresh fruit sponge:</strong> options vary with the season and availability. Allergen information is available on request.</p>
+      </div>
+    </section>
+
+
+
     <!-- ===================== Gallery ===================== -->
     <section class="section" id="gallery">
       <div class="container">
         <div class="section__head center">
           <p class="eyebrow">Gallery</p>
           <h2>A few recent bakes</h2>
-          <p class="lead">Placeholder photos for now &mdash; select any image to view it larger.</p>
+          <!-- <p class="lead">Placeholder photos for now &mdash; select any image to view it larger.</p> -->
         </div>
 
         <div class="gallery">
@@ -197,7 +226,6 @@
       <div class="container">
         <div class="section__head">
           <p class="eyebrow">FAQ</p>
-          <h2>Good things to know</h2>
         </div>
 
         <div class="faq">
@@ -303,7 +331,7 @@
           <h4>Explore</h4>
           <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#pricing">Sizes &amp; pricing</a></li>
+            <li><a href="#Cakes">Cakes</a></li>
             <li><a href="#desserts">Other bakes</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#faq">FAQ</a></li>
@@ -339,3 +367,10 @@
   <script src="theme.js" defer></script>
 </body>
 </html>
+
+
+
+
+Bespoke Cakes and catering for all occasions
+
+At tillies, we design and create beautiful, bespoke celebration cakes, as well as catering for all occasions.

@@ -57,6 +57,33 @@
     });
   }
 
+  /* ---- Services image parallax ------------------------------------ */
+  var parallaxSections = document.querySelectorAll("[data-parallax]");
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (parallaxSections.length && !reduceMotion.matches) {
+    var parallaxTicking = false;
+    var updateParallax = function () {
+      var viewportCenter = window.innerHeight / 2;
+      parallaxSections.forEach(function (section) {
+        var bounds = section.getBoundingClientRect();
+        var sectionCenter = bounds.top + (bounds.height / 2);
+        var distance = (sectionCenter - viewportCenter) / (window.innerHeight + bounds.height);
+        section.style.setProperty("--parallax-x", String(distance * -81) + "px");
+        section.style.setProperty("--parallax-y", String(distance * 81) + "px");
+      });
+      parallaxTicking = false;
+    };
+    var requestParallaxUpdate = function () {
+      if (!parallaxTicking) {
+        window.requestAnimationFrame(updateParallax);
+        parallaxTicking = true;
+      }
+    };
+    window.addEventListener("scroll", requestParallaxUpdate, { passive: true });
+    window.addEventListener("resize", requestParallaxUpdate);
+    updateParallax();
+  }
+
   /* ---- Footer year ---------------------------------------------- */
   var yearEl = document.querySelector("[data-year]");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
